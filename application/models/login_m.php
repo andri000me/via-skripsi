@@ -63,7 +63,7 @@ class login_m extends CI_Model {
 	}
 	public function getProyekBySatker($id)
 	{
-		return $this->db->select('a.id_proyek,a.nama_proyek,a.nomor_proyek,b.id_detail,b.progress')
+		return $this->db->select('a.id_proyek,a.nama_proyek,a.nomor_proyek,b.id_detail,(b.rencana+b.realisasi+b.deviasi)/3 as progress')
 		->join('detail_proyek b','b.id_proyek=a.id_proyek')
 		->where('a.id_user',$id)
 		->get('proyek a')->result_array();
