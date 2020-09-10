@@ -173,9 +173,10 @@ class Proses extends CI_Controller {
 	}
 	public function upload_dokumentasi()
 	{
+		// var_dump($_FILES);die;
 		$id_proyek = $this->input->post('id_proyek',true);
 		$config['upload_path']          = './uploads/';
-        $config['allowed_types']        = 'jpg|jpeg|png|pdf';
+        $config['allowed_types']        = 'jpg|jpeg|png|xlsx|pdf';
         $config['max_size']             = 2048;
         $config['encrypt_name']			= true;
 
@@ -189,7 +190,7 @@ class Proses extends CI_Controller {
         {
             $data = $this->upload->data();
             $this->login_m->uploadDokumentasi($data['file_name'],$data['file_size'],$id_proyek);
-            $this->session->set_flashdata('success','Gambar berhasil ditambahkan');
+            $this->session->set_flashdata('success','File dokumentasi berhasil ditambahkan');
 
         }
         redirect(base_url('admin/detail_proyek/'.$id_proyek));

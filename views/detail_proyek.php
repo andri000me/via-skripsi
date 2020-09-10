@@ -104,15 +104,23 @@
                                                     <div class="p-2">
                                                         <div class="row align-items-center">
                                                             <div class="col-auto">
-                                                                <?php if(pathinfo($lf['nama_file'], PATHINFO_EXTENSION)!='pdf'):?>
+                                                                <?php if(pathinfo($lf['nama_file'], PATHINFO_EXTENSION)!='pdf' && pathinfo($lf['nama_file'], PATHINFO_EXTENSION)!='xlsx'):?>
                                                                 <img src="<?=base_url();?>uploads/<?=$lf['nama_file'];?>"
-                                                                    class="avatar-sm rounded" alt="file-image" />
+                                                                    class="avatar-sm rounded" alt="file" />
+                                                                <?php else:?>
+                                                                <?php if(pathinfo($lf['nama_file'], PATHINFO_EXTENSION)=='xlsx'):?>
+                                                                <div class="avatar-sm">
+                                                                    <span class="avatar-title rounded">
+                                                                        .XLSX
+                                                                    </span>
+                                                                </div>
                                                                 <?php else:?>
                                                                 <div class="avatar-sm">
                                                                     <span class="avatar-title rounded">
                                                                         .PDF
                                                                     </span>
                                                                 </div>
+                                                                <?php endif;?>
                                                                 <?php endif;?>
                                                             </div>
                                                             <div class="col pl-0">

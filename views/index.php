@@ -61,7 +61,7 @@
                     <li class="side-nav-item">
                         <a href="<?=base_url('admin/data_proyek');?>" class="side-nav-link">
                             <i class="dripicons-list"></i>
-                            <span class="badge badge-success float-right">7</span>
+                            <!-- <span class="badge badge-success float-right">7</span> -->
                             <span> Data Proyek </span>
                         </a>
                     </li>
@@ -69,14 +69,14 @@
                     <li class="side-nav-item">
                         <a href="<?=base_url('admin/kontraktor');?>" class="side-nav-link">
                             <i class="dripicons-user-group"></i>
-                            <span class="badge badge-success float-right">7</span>
+                            <!-- <span class="badge badge-success float-right">7</span> -->
                             <span> Kontraktor </span>
                         </a>
                     </li>
                     <li class="side-nav-item">
                         <a href="<?=base_url('admin/pengguna');?>" class="side-nav-link">
                             <i class="dripicons-user"></i>
-                            <span class="badge badge-success float-right">7</span>
+                            <!-- <span class="badge badge-success float-right">7</span> -->
                             <span> Pengguna </span>
                         </a>
                     </li>
@@ -158,13 +158,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            2018 © Hyper - Coderthemes.com
+                            <?= date('Y'); ?> © e-Monitoring
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-right footer-links d-none d-md-block">
-                                <a href="javascript: void(0);">About</a>
+                                <!-- <a href="javascript: void(0);">About</a>
                                 <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
+                                <a href="javascript: void(0);">Contact Us</a> -->
                             </div>
                         </div>
                     </div>
